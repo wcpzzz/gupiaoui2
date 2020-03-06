@@ -38,6 +38,7 @@ export const constantRoutes = [
     path: '/',
     component: Layout,
     redirect: '/dashboard',
+    name:'dashboard',
     children: [{
       path: 'dashboard',
       meta: { title: 'dashboard.name', icon: 'dashboard' },
@@ -46,30 +47,75 @@ export const constantRoutes = [
   },
 
 
+  // {
+  //   path: '/merchants',
+  //   component: Layout,
+  //   redirect: '/merchants/list',
+  //   children: [
+  //     {
+  //       path: 'list',
+  //       name: 'List',
+  //       component: () => import('@/views/merchant/list'),
+  //       meta: { title: 'merchants.name', icon: 'shop01' }
+  //     }
+  //   ]
+  // },
+
   {
-    path: '/merchants',
+    path: '/vip',
     component: Layout,
-    redirect: '/merchants/list',
+    name:'vip',
+    redirect: '/vips/list',
+    meta: {
+      title: 'vips.name',
+    },
     children: [
       {
         path: 'list',
-        name: 'List',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'merchats.name', icon: 'shop01' }
+        component: () => import('@/views/vip/list'),
+        meta: { title: 'vips.name', icon: 'addressbook_fill' }
       }
     ]
   },
 
   {
-    path: '/users',
+    path: '/coupon',
     component: Layout,
+    redirect: '/coupons/list',
+    name:'coupon',
+    meta: {
+      title: 'coupon.name',
+    },
     children: [
       {
-        path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'users.name', icon: 'addressbook_fill' }
+        path: 'list',
+        component: () => import('@/views/coupon/list'),
+        meta: { title: 'coupon.name', icon: 'youhuiquan' }
       }
+    ]
+  },
+  {
+    path: '/third',
+    component: Layout,
+    redirect: '/third/list',
+    name:'third',
+    meta: {
+      title: 'third.name',
+      icon: 'jigou'
+    },
+    children: [
+      {
+        path: 'list',
+        name:'list',
+        component: () => import('@/views/third/list'),
+        meta: { title: 'third.list'}
+      },
+      {
+        path: 'group',
+        name:'group',
+        component: () => import('@/views/third/group'),
+        meta: { title: 'third.group.name'}
+      },
     ]
   },
 

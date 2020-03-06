@@ -57,7 +57,6 @@ const actions = {
         accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
       }
 
-      console.log('可现实的路由'+JSON.stringify(accessedRoutes))
       commit('SET_ROUTES', accessedRoutes)
       resolve(accessedRoutes)
     })

@@ -1,5 +1,8 @@
 <template>
   <el-scrollbar wrapClass="scrollbar-wrapper">
+<!--    <span style="display: flex;justify-content: center;width: 100%;padding: 20px 0" class="base-color" v-show="!isCollapse">-->
+<!--          <img src="https://ss-platform-test.shijicloud.com/shop-xd-web/images/shiji-logo-white.png" style="width: 96px;height: 50px;">-->
+<!--    </span>-->
     <el-menu
       mode="vertical"
       :show-timeout="200"

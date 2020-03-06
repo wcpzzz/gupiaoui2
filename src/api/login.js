@@ -19,6 +19,7 @@ export function getInfo() {
 }
 
 export function logout() {
+  console.log('xxx')
   return request({
     url: '/admin/logout',
     method: 'post'

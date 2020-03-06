@@ -64,6 +64,7 @@ const user = {
     // 登出
     logOut({ commit, state }) {
       return new Promise((resolve, reject) => {
+        console.log('xxx')
         logout(state.token).then(() => {
           commit('SET_TOKEN', '')
           commit('SET_ROLES', [])
