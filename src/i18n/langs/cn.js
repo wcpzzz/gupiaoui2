@@ -101,6 +101,44 @@ const cn = {
       param2:'请输入商户号或机构号'
     }
   },
+  vipCard:{
+    name:'优惠券管理',
+    details:'优惠券详情',
+    table:{
+      coupon_code:'优惠券代码',
+      coupon_name:'优惠券名称',
+      own_type:'所属类型',
+      grp_code:'所属商户',
+      coupon_type:'优惠券类型',
+      brand_code:'品牌',
+      coupon_color:'颜色',
+      exp_type:'有效期方式',
+      begin_date:'生效日期',
+      exp_date:'失效日期',
+      begin_day:'领取后N天生效',
+      exp_day:'领取后N天失效',
+      coupon_desc:'优惠详情',
+      time_limit_type:'时间段限制方式',
+      date_limit:'日期限制按周',
+      time_limit_start:'时间限制开始',
+      time_limit_end:'时间限制截止',
+      share_falg:'是否允许分享',
+      give_falg:'是否允许转赠',
+      stock_num:'库存数量',
+      limit_num:'每用户领券数量限制',
+      use_tip:'使用须知',
+      shop_limit_type:'门店适用方式',
+      status:'状态',
+      cre_date:'创建时间',
+      modi_date:'修改时间',
+      teller:'操作员',
+      memo:'备注'
+    },
+    filter:{
+      param1:'请输入优惠券编号或名称',
+      param2:'请输入商户号或机构号'
+    }
+  },
   third:{
     name:'机构管理',
     list:'机构列表',
@@ -130,6 +168,53 @@ const cn = {
       name:'机构组列表'
     }
   },
+
+  //wcp
+  points:{
+    name:'积分管理',
+    list:'用户积分',
+    details:'积分详情',
+    table:{
+      org_code:'机构代码',
+      org_name:'机构名称',
+      acq_flag:'是否收单',
+      issu_flag:'是否发券',
+      org_pwd:'登录密码',
+      init_pwd:'初始密码',
+      mobile:'手机号',
+      status:'状态',
+      cre_date:'创建时间',
+      modi_date:'修改时间',
+      teller:'操作员',
+      memo:'备注',
+      openid:'微信公众号用户标识',
+      group_controller:'组管理'
+    },
+    filter:{
+      param1:'请输入机构编号或机构名称'
+    },
+    default:{
+      name:'默认赠送规则'
+    },
+    mch:{
+      name:'商户定义规则',
+      table:{
+        rule_code:'规则代码',
+        grp_code:'所属商户',
+        limit_amt:'默认金额限额',
+        limit_points:'默认积分限额',
+        amt:'默认金额',
+        points:'默认积分',
+        status:'状态',
+        cre_date:'创建时间',
+        modi_date:'修改时间',
+        teller:'操作员',
+        memo:'备注'
+      },
+    }
+  },
+
+
   setting:{
     name:'设置',
     submenu_system:'系统设置',

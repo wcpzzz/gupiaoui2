@@ -13,14 +13,14 @@ module.exports = {
     proxyTable: {
       '/api/**': {
         // target: process.env.BASE_API,
-        target: 'http://localhost:9013',
+        target: 'localhost:8088',
         pathRewrite:{
           '^/api':'/'
         }
       },
     },
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '192.168.0.89', // can be overwritten by process.env.HOST
     port: 8090, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

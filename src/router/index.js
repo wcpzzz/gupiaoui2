@@ -94,6 +94,27 @@ export const constantRoutes = [
       }
     ]
   },
+
+  {
+    path: '/vipCard',
+    component: Layout,
+    redirect: '/vipCard/list',
+    name:'vipCard',
+    meta: {
+      title: 'vipCard.name',
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/vipCard/list'),
+        meta: { title: 'vipCard.name', icon: 'youhuiquan' }
+      }
+    ]
+  },
+
+
+
+
   {
     path: '/third',
     component: Layout,
@@ -118,6 +139,42 @@ export const constantRoutes = [
       },
     ]
   },
+
+  // wcp
+  {
+    path: '/points',
+    component: Layout,
+    redirect: '/points/list',
+    name:'points',
+    meta: {
+      title: 'points.name',
+      icon: 'jifen'
+    },
+    children: [
+      {
+        path: 'list',
+        name:'list',
+        component: () => import('@/views/points/list'),
+        meta: { title: 'points.list'}
+      },
+      {
+        path: 'default',
+        name:'default',
+        component: () => import('@/views/points/default'),
+        meta: { title: 'points.default.name'}
+      },
+      {
+        path: 'mch',
+        name:'mch',
+        component: () => import('@/views/points/mch'),
+        meta: { title: 'points.mch.name'}
+      },
+    ]
+  },
+
+
+
+
 
   {
     path: '/setting',
@@ -162,7 +219,7 @@ export const asyncRoutes = [
     name: 'Permission',
     meta: {
       title: 'permission.name',
-      icon: 'lock',
+      icon: 'lock1',
       roles: ['admin', 'TEST'] // you can set roles in root nav
     },
     children: [
